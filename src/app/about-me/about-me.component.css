@@ -1,13 +1,35 @@
-/* about.component.css */
-.about {
-    /* Stili per il contenitore principale */
-  }
-  
-  .profile-picture {
-    /* Stili per l'immagine del profilo */
-  }
-  
-  .about-content {
-    /* Stili per il contenuto della pagina "Chi Sono" */
-  }
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer-container {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-links a,
+.contact-info p {
+  margin: 5px;
+  text-decoration: none;
+  color: white;
+}
+
+.copyright {
+  margin-top: 10px;
+}

@@ -1,1 +1,59 @@
-<p>contact works!</p>
+<div>
+    <h2>Contact List</h2>
+    <ul>
+      <li *ngFor="let contact of contacts">
+        {{ contact.firstName }} {{ contact.lastName }} ({{ contact.email }})
+        <button (click)="deleteContact(contact.id)">Delete</button>
+      </li>
+    </ul>
+  
+    <div>
+      <h3>Add New Contact</h3>
+      <form #contactForm="ngForm" (ngSubmit)="addContact(firstName.value, lastName.value, email.value)">
+        <div>
+          <label for="firstName">Nome:</label>
+          <input type="text" id="firstName" name="firstName" required #firstName>
+        </div>
+        <div>
+          <label for="lastName">Last Name:</label>
+          <input type="text" id="lastName" name="lastName" required #lastName>
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required #email>
+        </div>
+        <button type="submit">Add Contact</button>
+      </form>
+    </div>
+  </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="footer-container">
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/sergeguea/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/SERGE3-g" target="_blank">GitHub</a>
+      <a href="https://twitter.com/your-handle" target="_blank">Twitter</a>
+      <!-- Aggiungi altri link social qui -->
+    </div>
+    <div class="contact-info">
+      <p>Email: gueaserge2@gmail.com</p>
+      <p>Phone: +393892978507</p>
+    </div>
+    <div class="copyright">
+      <p>&copy; {{ currentYear }} SergeGuea. All rights reserved.</p>
+    </div>
+  </div>
+  
