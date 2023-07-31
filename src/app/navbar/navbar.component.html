@@ -1,4 +1,4 @@
-<nav class="navbar">
+<!-- <nav class="navbar">
     <div class="navbar-container">
       <div class="logo">SERGE GUEA</div>
       <ul class="nav-links">
@@ -9,5 +9,17 @@
         <li><a routerLink="/contact">Contact</a></li>
       </ul>
     </div>
+  </nav> -->
+  
+  <nav class="navbar">
+    <button class="menu-toggle" (click)="toggleMenu()">&#9776;</button>
+    <div class="nav-links" [ngClass]="{ 'active': menuActive }">
+      <a routerLink="/" (click)="menuActive = false">Home</a>
+      <a routerLink="/about" (click)="menuActive = false">About</a>
+      <a routerLink="/projects" (click)="menuActive = false">Projects</a>
+      <a routerLink="/skills" (click)="menuActive = false">Skills</a>
+      <a routerLink="/contact" (click)="menuActive = false">Contact</a>
+    </div>
   </nav>
+  
   

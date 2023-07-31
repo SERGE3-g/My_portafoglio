@@ -1,1 +1,84 @@
-<p>skills works!</p>
+<style>
+    .skills-container {
+        margin: 0 auto;
+        width: 1200px;
+        background-color: aqua;
+    }
+    
+    .skills-container h2 {
+        text-align: center;
+    }
+    
+    .skills-container h3 {
+        margin-bottom: 0;
+    }
+    
+    .skills-container ul {
+        list-style: none;
+        padding-left: 0;
+    }
+    
+    .skills-container ul li {
+        margin-bottom: 5px;
+    }
+    
+    .skills-container ul li:last-child {
+        margin-bottom: 0;
+    }
+
+    .skills-container ul li::before {
+        content: "▹";
+        margin-right: 5px;
+        margin-left: 5px;
+       
+    }
+
+    .skills-container ul li:last-child::before {
+        content: "";
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .skills-container > div {
+        margin-bottom: 50px;
+    }
+
+    @media (min-width: 768px) {
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    
+        .skills-container > div {
+            width: 48%;
+        }
+    }
+</style>
+
+<div class="skills-container">
+    <h2>My Skills</h2>
+    <div *ngFor="let category of skills">
+      <h3>{{ category.name }}</h3>
+      <ul>
+        <li *ngFor="let skill of category.skills">{{ skill }}</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="footer-container">
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/sergeguea/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/SERGE3-g" target="_blank">GitHub</a>
+      <a href="https://twitter.com/your-handle" target="_blank">Twitter</a>
+      <!-- Aggiungi altri link social qui -->
+    </div>
+    <div class="contact-info">
+      <p>Email: gueaserge2@gmail.com</p>
+      <p>Phone: +393892978507</p>
+    </div>
+    <div class="copyright">
+      <p>&copy; {{ currentYear }} SergeGuea. All rights reserved.</p>
+    </div>
+  </div>
+  
