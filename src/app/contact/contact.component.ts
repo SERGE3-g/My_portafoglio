@@ -2,19 +2,6 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ContactService } from '../services/contact.service';
 
-interface Contact {
-  id?: number;
-  nome: string;
-  cognome: string;
-  telefono?: string; 
-  indirizzo?: string; 
-  citta?: string; 
-  provincia?: string; 
-  cap?: string; 
-  nazioneForm?: string; 
-  email?: string; 
-  messaggio?: string
-}
 
 @Component({
   selector: 'app-contact',
@@ -38,51 +25,31 @@ nazione =['Italia','Francia','Germania','Spagna','Inghilterra','Stati Uniti',
 currentYear = new Date().getFullYear();
 
 
-/* contactForm: FormGroup;
-
-constructor(private fb: FormBuilder, private contactService: ContactService) {
-  this.contactForm = this.fb.group({
-    nome: ['', Validators.required],
-    cognome: ['', Validators.required],
-    telefono: [''],
-    indirizzo: [''],
-    citta: [''],
-    provincia: [''],
-    cap: [''],
-    nazioneForm: [''],
-    email: ['', Validators.email],
-    messaggio: ['']
-  });
-}
-
-submitContactForm() {
-  this.contactService.saveContact(this.contactForm.value).subscribe((_response: any) => {
-
-
-  });
-} */
-
   name!: string;
   email!: string;
   message!: string;
 
-  constructor(private contactService: ContactService) {}
+constructor(private contactService: ContactService) {}
 
-  submitForm() {
-    const contactData = {
-      name: this.name,
-      email: this.email,
-      message: this.message
-    };
+submitForm() {
+  const contactData = {
+    name: this.name,
+    email: this.email,
+    message: this.message
+  };
 
-    this.contactService.saveContact(contactData).subscribe(response => {
-      
-    });
+  this.contactService.saveContact(contactData).subscribe(response => {
+    console.log(response);
 
-    // Opzionale: ripristina i valori del modulo
-    this.name = '';
-    this.email = '';
-    this.message = '';
-  }
+  });
+  this.name = '';
+  this.email = '';
+  this.message = '';
+}
 
 }
+
+
+
+
+

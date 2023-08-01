@@ -1,27 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Contact } from '../interfaces/contact';
 
-export interface Contact {
-  id?: number;
-  nome: string;
-  cognome: string;
-  telefono?: string; 
-  indirizzo?: string; 
-  citta?: string; 
-  provincia?: string; 
-  cap?: string; 
-  nazioneForm?: string; 
-  email?: string; 
-  messaggio?: string
-}
 
 @Injectable({
   providedIn: 'root'
 })
 export class ContactService {
 
-  readonly url: string = 'http://localhost:3000/contacts'; 
+  readonly url: string = 'http://localhost:3000/contacts';
 
   constructor(private http: HttpClient) { }
 
