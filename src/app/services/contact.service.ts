@@ -4,34 +4,46 @@ import { Observable } from 'rxjs';
 
 export interface Contact {
   id?: number;
-  firstName: string;
-  lastName: string;
-  email: string;
+  nome: string;
+  cognome: string;
+  telefono?: string; 
+  indirizzo?: string; 
+  citta?: string; 
+  provincia?: string; 
+  cap?: string; 
+  nazioneForm?: string; 
+  email?: string; 
+  messaggio?: string
 }
 
 @Injectable({
   providedIn: 'root'
 })
 export class ContactService {
-  private apiUrl = 'http://localhost:3000/api/contacts'; 
+
+  readonly url: string = 'http://localhost:3000/contacts'; 
 
   constructor(private http: HttpClient) { }
 
   getContacts(): Observable<Contact[]> {
-    return this.http.get<Contact[]>(this.apiUrl);
+    return this.http.get<Contact[]>(this.url);
   }
 
   createContact(contact: Contact): Observable<Contact> {
-    return this.http.post<Contact>(this.apiUrl, contact);
+    return this.http.post<Contact>(this.url, contact);
   }
 
   updateContact(contact: Contact): Observable<Contact> {
-    const url = `${this.apiUrl}/${contact.id}`;
+    const url = `${this.url}/${contact.id}`;
     return this.http.put<Contact>(url, contact);
   }
 
   deleteContact(id: number): Observable<void> {
-    const url = `${this.apiUrl}/${id}`;
+    const url = `${this.url}/${id}`;
     return this.http.delete<void>(url);
+  }
+
+  saveContact(contactData: any) {
+    return this.http.post(this.url, contactData);
   }
 }
