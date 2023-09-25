@@ -1,23 +1,60 @@
-<!-- home.component.html -->
 <div class="home">
-    <div class="hero">
-      <h1>Benvenuto nel mio Portafoglio</h1>
-      <p>Ciao, sono Serge  e sono un Web Developer.</p>
-      <!-- Altri elementi accattivanti come un'immagine di sfondo o un video possono essere aggiunti qui -->
-
-    </div>
-    <div class="about-me">
-
-    </div>
-    <div class="portfolio">
-
-    </div>
-    <div class="contact">
-
-
+  <div class="hero">
+    <h1>Welcome to my Portfolio</h1>
+    <p>Hi, I'm Serge and I'm a Web Developer.</p>
+    <button class="btn btn-primary">View My Work</button>
+  </div>
+  <div class="about-me">
+    <h2>About Me</h2>
+    <p>I'm a passionate web developer with over 5 years of experience in building web applications using Angular, React, and Vue.js. I love to learn new technologies and explore new ways of solving problems.</p>
+    <button class="btn btn-secondary">Learn More</button>
+  </div>
+  <div class="portfolio">
+    <h2>My Portfolio</h2>
+    <div class="card-deck">
+      <div class="card">
+        <img class="card-img-top" src="https://via.placeholder.com/300x200" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Project 1</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, sapien vel bibendum bibendum, velit sapien ultrices velit, vel ultricies velit sapien vel sapien.</p>
+          <button class="btn btn-primary">View Project</button>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top" src="https://via.placeholder.com/300x200" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Project 2</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, sapien vel bibendum bibendum, velit sapien ultrices velit, vel ultricies velit sapien vel sapien.</p>
+          <button class="btn btn-primary">View Project</button>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top" src="https://via.placeholder.com/300x200" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Project 3</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, sapien vel bibendum bibendum, velit sapien ultrices velit, vel ultricies velit sapien vel sapien.</p>
+          <button class="btn btn-primary">View Project</button>
+        </div>
+      </div>
     </div>
   </div>
-
+  <div class="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+      </div>
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea class="form-control" id="message" rows="3"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
   <!-- init footer -->
   <div class="footer-container">
     <div class="social-links">

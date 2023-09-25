@@ -10,6 +10,11 @@ import { SkillsComponent } from './skills/skills.component';
 import { ContactComponent } from './contact/contact.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ExperienceComponent } from './experience/experience.component';
+import { EducationComponent } from './education/education.component';
+import { CertificationComponent } from './certification/certification.component';
+import { LanguageComponent } from './language/language.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +24,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ProjectsComponent,
     SkillsComponent,
     ContactComponent,
-    NavbarComponent
+    NavbarComponent,
+    ExperienceComponent,
+    EducationComponent,
+    CertificationComponent,
+    LanguageComponent,
+    PortfolioComponent
   ],
   imports: [
     BrowserModule,

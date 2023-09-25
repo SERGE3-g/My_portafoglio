@@ -1,0 +1,23 @@
+
+<!-- FILEPATH: src/app/language/language.component.html -->
+
+<div class="container">
+    <h1>Benvenuto nella sezione lingue!</h1>
+    <p>Qui puoi selezionare la tua lingua preferita:</p>
+    <div class="language-list">
+        <div class="language-item" *ngFor="let language of languages">
+            <button (click)="setLanguage(language.code)" [ngClass]="{'active': language.code === selectedLanguage}">
+                {{ language.name }}
+            </button>
+        </div>
+    </div>
+
+    <div class="language-content">
+        <div class="language-item" *ngFor="let language of languages">
+            <div *ngIf="language.code === selectedLanguage">
+                <h2>{{ language.name }}</h2>
+                <p>{{ language.description }}</p>
+            </div>
+        </div>
+    </div>
+</div>

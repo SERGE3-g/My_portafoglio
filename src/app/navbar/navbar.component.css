@@ -1,82 +1,80 @@
-/* .navbar {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-  }
-  
-  .navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .logo {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  .nav-links {
-    list-style: none;
-    display: flex;
-  }
-  
-  .nav-links li {
-    margin-left: 20px;
-  }
-  
-  .nav-links li a {
-    text-decoration: none;
-    color: #fff;
-  }
-  
-  .nav-links li a:hover {
-    border-bottom: 2px solid #fff;
-  }
-   */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
 
-   .navbar {
-    display: flex;
-    justify-content: space-between;
-    background-color: #333;
-    padding: 10px;
-  }
-  
-  .navbar .menu-toggle {
-    display: none;
-    font-size: 30px;
-    color: white;
-    background: none;
-    border: none;
-  }
-  
-  .navbar .nav-links {
-    display: flex;
-  }
-  
-  .navbar .nav-links a {
-    text-decoration: none;
-    color: white;
-    padding: 10px 20px;
-  }
-  
-  .navbar .nav-links .active {
-    display: none;
-    flex-direction: column;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .navbar .menu-toggle {
-      display: block;
-    }
-  
-    .navbar .nav-links {
-      display: none;
-      width: 100%;
-      background-color: #333;
-    }
-  
-    .navbar .nav-links.active {
-      display: flex;
-    }
-  }
-  
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+  transition: 0.4s;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  transition: 0.4s;
+}
+
+.nav-links a:hover {
+  color: #f1c40f;
+}
+
+.show {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  right: 0;
+  background-color: #333;
+  width: 100%;
+  height: calc(100vh - 70px);
+  z-index: 1;
+}
+
+.show li {
+  margin: 10px 0;
+}
+
+.show a {
+  font-size: 24px;
+  padding: 20px;
+}

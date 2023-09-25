@@ -6,10 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-  menuActive = false;
+  navbarOpen = false;
 
-  toggleMenu() {
-    this.menuActive = !this.menuActive;
+  toggleNavbar() {
+    this.navbarOpen = !this.navbarOpen;
   }
 
 }

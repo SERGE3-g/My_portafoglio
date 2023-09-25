@@ -1,25 +1,25 @@
-<!-- <nav class="navbar">
-    <div class="navbar-container">
-      <div class="logo">SERGE GUEA</div>
-      <ul class="nav-links">
-        <li><a routerLink="/">Home</a></li>
-        <li><a routerLink="/about">About</a></li>
-        <li><a routerLink="/projects">Portfolio</a></li>
-        <li><a routerLink="/skills">Skills</a></li>
-        <li><a routerLink="/contact">Contact</a></li>
-      </ul>
+
+<nav class="navbar">
+  <div class="navbar-container">
+    <div class="logo">SERGE GUEA</div>
+    <div class="navbar-toggle" (click)="toggleNavbar()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+
     </div>
-  </nav> -->
-  
-  <nav class="navbar">
-    <button class="menu-toggle" (click)="toggleMenu()">&#9776;</button>
-    <div class="nav-links" [ngClass]="{ 'active': menuActive }">
-      <a routerLink="/" (click)="menuActive = false">Home</a>
-      <a routerLink="/about" (click)="menuActive = false">About</a>
-      <a routerLink="/projects" (click)="menuActive = false">Projects</a>
-      <a routerLink="/skills" (click)="menuActive = false">Skills</a>
-      <a routerLink="/contact" (click)="menuActive = false">Contact</a>
-    </div>
-  </nav>
+    <ul class="nav-links" [ngClass]="{'show': navbarOpen}">
+      <li><a routerLink="/header">Home</a></li>
+      <li><a routerLink="/about-me">About</a></li>
+      <li><a routerLink="/portfolio">Portfolio</a></li>
+      <li><a routerLink="/experience">Experience</a></li>
+      <li><a routerLink="/education">Education</a></li>
+      <li><a routerLink="/certification">Certifications</a></li>
+      <li><a routerLink="/language">Languages</a></li>
+      <li><a routerLink="/skills">Skills</a></li>
+      <li><a routerLink="/contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
   
   

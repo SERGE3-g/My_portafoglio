@@ -1,35 +1,142 @@
+/* Style for the hero section */
+.home .hero {
+  background-color: #f2f2f2;
+  padding: 50px;
+  text-align: center;
+}
 
-.header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-  }
+.home .hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
 
-  .site-title {
-    font-size: 24px;
-    font-weight: bold;
-    color: #fff;
-    text-decoration: none;
-  }
+.home .hero p {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
 
+/* Style for the about me section */
+.home .about-me {
+  background-color: #fff;
+  padding: 50px;
+  text-align: center;
+}
 
-  .footer-container {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.home .about-me h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
 
-  .social-links a,
-  .contact-info p {
-    margin: 5px;
-    text-decoration: none;
-    color: white;
-  }
+.home .about-me p {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
 
-  .copyright {
-    margin-top: 10px;
-  }
-  
+/* Style for the portfolio section */
+.home .portfolio {
+  background-color: #f2f2f2;
+  padding: 50px;
+  text-align: center;
+}
+
+.home .portfolio h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.home .portfolio .card-deck {
+  margin-top: 40px;
+}
+
+.home .portfolio .card {
+  margin-bottom: 30px;
+}
+
+.home .portfolio .card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.home .portfolio .card-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.home .portfolio .card-text {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Style for the contact section */
+.home .contact {
+  background-color: #fff;
+  padding: 50px;
+  text-align: center;
+}
+
+.home .contact h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.home .contact form {
+  margin-top: 40px;
+}
+
+.home .contact .form-group {
+  margin-bottom: 20px;
+}
+
+.home .contact label {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.home .contact input,
+.home .contact textarea {
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  max-width: 500px;
+}
+
+.home .contact textarea {
+  height: 150px;
+}
+
+.home .contact button[type="submit"] {
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.home .contact button[type="submit"]:hover {
+  background-color: #0069d9;
+}
+/* Style for the footer section */
+.home .footer-container {
+  background-color: #f2f2f2;
+  padding: 50px;
+  text-align: center;
+}
+
+.home .footer-container .social-links a {
+  font-size: 24px;
+  margin-right: 20px;
+}
+
+.home .footer-container .contact-info p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.home .footer-container .copyright {
+  margin-top: 40px;
+  font-size: 18px;
+}
